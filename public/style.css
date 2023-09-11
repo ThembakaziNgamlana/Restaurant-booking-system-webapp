@@ -1,0 +1,28 @@
+
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* background-color: #ff7d00; */
+    /* color: #15616d; */
+}
+
+.tables {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.table-booking {
+    margin: 1em;
+    padding: 1em;
+    width: 10em;
+    height: 10em;
+    border-radius: 0.5em;
+    border: 1px solid;
+    /* background-color: burlywood; */
+}
+
+.booked {
+    background-color: lightseagreen;
+}

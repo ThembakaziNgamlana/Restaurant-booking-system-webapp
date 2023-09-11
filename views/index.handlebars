@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/book" method="post">
+
+    <h2 class="title is-2">Book a table</h2>
+
+    <div class="notification is-danger is-light">
+        
+        Error Flash messages goes here...
+        <a href="https://bulma.io/documentation/elements/notification/">Read here if you wanna change the style</a>
+    </div>
+    <div class="notification is-success is-light">
+        
+        Success Flash messages goes here...
+        <a href="https://bulma.io/documentation/elements/notification/">Read here if you wanna change the style</a>
+    </div>
+
+
+    <div class="columns">
+
+        {{#each tables}}
+
+        <div class="column">
+            <div class="panel">
+                <p class="panel-heading">
+                    Table XYZ
+                </p>
+                <div class="panel-block">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <img src="./images/table.png" width="80">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-block">
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+
+                            <label class="label">Table capacity</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input is-static" type="email" value="5" readonly>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-block">
+
+                    <div class="control">
+                        {{#if booked}}
+                        <img src="./images/reserved.png" width="60">
+                        {{else}}
+                        <label class="radio">
+                            <input type="radio" name="tableId" id="tableId">
+                            Book this table
+                        </label>
+                        {{/if}}
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        {{/each}}
+    </div>
+
+    <div class="columns">
+        <div class="column is-3">
+            <div class="field">
+                <label for="" class="label">Number of people in booking</label>
+                <div class="control">
+                    <input class="input" type="text" name="booking_size">
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="field">
+                <label for="" class="label">Username</label>
+                <div class="control">
+                    <input class="input" type="text" name="username">
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="field">
+                <label for="" class="label">Phone number</label>
+                <div class="control">
+                    <input class="input" type="text" name="phone_number">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <input class="button is-primary" type="submit" value="Book">
+    </div>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
